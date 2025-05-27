@@ -13,7 +13,6 @@
   #include <Arduino.h> // Principal para usar Arduino
 
 
-
 /*
   #include <Pixy2Line.h>
   #include <Pixy2Video.h>
@@ -26,8 +25,6 @@
   #include <I2Cdev.h>
   #include <string.h>
 */
-
-
 
 
 // Definir variables
@@ -89,7 +86,7 @@ void loop() {
 
 do{
   if(pixy.ccc.Block>0 && rojo){    // Si la Pixy lee un objeto  y es rojo se cumplirá la condición
-    if(ancho>60){ // El objeto se encuentra a 3cm
+    if(ancho>60){ /  / El objeto se encuentra a 3cm
       servito.write(180); // Giro hacia la derecha mediante grados    
     }
   }else{
