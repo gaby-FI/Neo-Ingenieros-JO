@@ -52,7 +52,7 @@
 
   int velocidad=200; // Velocidad inicial del robot
 // Temporizador
- unsigned long TiempoInicio=millis(); // Temporizador que irá incrementando
+ unsigned long TiempoInicio=millis(); // Inicio del temporizador
  const unsigned long DuracionTotal=180000; // 3 minutos en los que el robot recorrerá la pista
 
 
@@ -76,30 +76,30 @@ void girarIzquierda() {
 
 void setup() {
   serial.begin(9600);
-  pixy.init();
+  pixy.init(); // Se inicia la Pixy
   pixy.setLamp(1,1); // Encender luces de la cámara
-  int servito;
+  int servito; // Definir Servomotor
     rojo=pixy.ccc.Block[0].m_signature==1; // Definir rojo
     verde=pixy.ccc.Block[0].m_signature==2; // Definir verde
     ancho=pixy.ccc.Block[0].m_width; // Definir ancho
 }
 void loop() {
-  num=pixy.getblocks();
-  millis ()-TiempoInicio
+  num=pixy.getblocks(); //
+  millis ()-TiempoInicio //
 
 do{
-  if(pixy.ccc.Block>0 && rojo){
-    if(ancho>60){ // 3cm
-      servito.write(180);    
+  if(pixy.ccc.Block>0 && rojo){    // Si la Pixy lee un objeto  y es rojo se cumplirá la condición
+    if(ancho>60){ // El objeto se encuentra a 3cm
+      servito.write(180); // Giro hacia la derecha mediante grados    
     }
   }else{
-    if(pixy.ccc.Block>0 && verde){
-      if(ancho>60){ // 3cm
-        servito.write(0); 
+    if(pixy.ccc.Block>0 && verde){    // Si la Pixy lee un objeto y es verde se cumplirá la condición
+      if(ancho>60){ // El objeto se encuentra a 3cm
+        servito.write(0); // Giro hacia la izquierda mediante grados 
       }
     }
   }
-} while(TiempoInicio<=DuracionTotal);
+} while(TiempoInicio<=DuracionTotal); // Si el temporizador no ha llegado a los 3 minutos se repite el ciclo
   pixy.setLamp(0,0); // Apagar luces de la camara
 
 /*
