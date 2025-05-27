@@ -31,28 +31,29 @@
 
 
 // Definir variables
-  #define num
-  #define ancho
-  #define rojo
-  #define verde
+// Obstáculos
+  #define num // Cantidad de objetos detectados
+  #define ancho // Medida del ancho del objeto para calcular la distancia
+  #define rojo // Objeto color rojo
+  #define verde // Objeto color verde
+// Motor
+  #define MOTOR_IZQ_ADELANTE 11    //Controla la parte izquierda delantera del motor
+  #define MOTOR_IZQ_ATRAS 9    //Controla la parte izquierda trasera del motor    
+  #define MOTOR_DER_ADELANTE 8    //Controla la parte derecha delantera del motor
+  #define MOTOR_DER_ATRAS 7    //Controla la parte derecha trasera del motor
+// Ultrasonidos
+  #define trigpin1 5    // Trigger del ultrasonido derecho del robot
+  #define echopin1 4    // Eco del ultrasonido derecho del robot
+  #define trigpin2 3    // Trigger del ultrasonido izquierdo del robot
+  #define echopin2 2    // Eco del ultrasonido izquierdo del robot
 // Velocidad
   #define Activa1 6
   #define Activa2 5
-// Motor
-  #define MOTOR_IZQ_ADELANTE 11
-  #define MOTOR_IZQ_ATRAS 9
-  #define MOTOR_DER_ADELANTE 8
-  #define MOTOR_DER_ATRAS 7
-// Ultrasonidos
-  #define trigpin1 5
-  #define echopin1 4
-  #define trigpin2 3
-  #define echopin2 2
-// Velocidad
-  int velocidad=200;
+
+  int velocidad=200; // Velocidad inicial del robot
 // Temporizador
- unsigned long TiempoInicio=millis();
- const unsigned long DuracionTotal=180000;
+ unsigned long TiempoInicio=millis(); // Temporizador que irá incrementando
+ const unsigned long DuracionTotal=180000; // 3 minutos en los que el robot recorrerá la pista
 
 
 
@@ -76,7 +77,7 @@ void girarIzquierda() {
 void setup() {
   serial.begin(9600);
   pixy.init();
-  pixy.setLamp(1,1); // Encender luces de la camara
+  pixy.setLamp(1,1); // Encender luces de la cámara
   int servito;
     rojo=pixy.ccc.Block[0].m_signature==1; // Definir rojo
     verde=pixy.ccc.Block[0].m_signature==2; // Definir verde
