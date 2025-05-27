@@ -1,23 +1,35 @@
 
 // Librerias
-  #include <PIDLoop.h>
-  #include <Pixy2.h>
-  #include <Pixy2CCC.h>
-  #include <Pixy2I2C.h>
+  //Pixy
+  #include <Pixy2.h> // Principal para usar la cámara Pixy
+  #include <Pixy2CCC.h> // Permite detectar objetos de diferentes colores en la cámara
+  #include <Pixy2I2C.h> // Comunicación con la Pixy mediante distintos protocolos (I2C)
+  #include <Pixy2SPI_SS.h> // Comunicación con la Pixy mediante distintos protocolos (SPI)
+  #include <Pixy2UART.h> // Comunicación con la Pixy mediante distintos protocolos (UART)
+  // Servomotor
+  #include <Servo.h> // Controla al servomotor
+    Servo servito;
+  //Arduino
+  #include <Arduino.h> // Principal para usar Arduino
+
+
+
+/*
   #include <Pixy2Line.h>
-  #include <Pixy2SPI_SS.h>
-  #include <Pixy2UART.h>
   #include <Pixy2Video.h>
   #include <TPixy2.h>
   #include <ZumoBuzzer.h>
   #include <ZumoMotors.h>
-  #include <Arduino.h>
+  #include <PIDLoop.h>
   #include <SPI.h>
   #include <Wire.h>
   #include <I2Cdev.h>
   #include <string.h>
-  #include <Servo.h>
-    Servo servito;
+*/
+
+
+
+
 // Definir variables
   #define num
   #define ancho
@@ -38,7 +50,6 @@
   #define echopin2 2
 // Velocidad
   int velocidad=200;
-
 // Temporizador
  unsigned long TiempoInicio=millis();
  const unsigned long DuracionTotal=180000;
