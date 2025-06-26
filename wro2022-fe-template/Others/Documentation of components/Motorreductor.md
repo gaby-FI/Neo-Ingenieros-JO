@@ -1,6 +1,6 @@
 Technical Datasheet – Yellow Gear Motor for Arduino
 
-
+![Motorreductor-con-caja-reductora-6V-1-48-3-400x400-1](https://github.com/user-attachments/assets/a77d9c6e-2b32-4720-a8b2-9dc16ba67ae6)
 
 General Features:
 - Type: DC motor with gearbox
