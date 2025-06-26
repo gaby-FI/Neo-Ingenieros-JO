@@ -1,0 +1,26 @@
+Technical Datasheet – Yellow Gear Motor for Arduino
+
+
+
+General Features:
+- Type: DC motor with gearbox
+- Operating voltage: 3V to 6V (6V recommended)
+- Gear ratio: 48:1
+- No-load current: 70–100 mA
+- Load current: 110–150 mA
+- No-load speed:
+- 3V: 125 RPM
+- 5V: 200 RPM
+- 6V: 230 RPM
+- Load speed:
+- 3V: 95 RPM
+- 5V: 160 RPM
+- 6V: 175 RPM
+- Output torque:
+- 3V: 0.8 kg·cm
+- 5V: 1.0 kg·cm
+- 6V: 1.1 kg·cm
+- Motor dimensions: 70 mm x 22 mm x 18 mm
+- Weight: 50 g
+- Noise level: <65 dB
+- Max compatible wheel diameter: 6.5 cm
