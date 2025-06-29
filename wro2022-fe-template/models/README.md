@@ -10,8 +10,5 @@ It includes all the digital design files required to fabricate structural and me
 - Motor brackets
 - Enclosures or protective covers
 
-Files may include formats like `.stl`, `.obj`, `.step` for 3D printing, or `.dxf`, `.svg` for laser cutting/CNC milling.
-
-If there is nothing to add to this location, the directory can be removed.
 
 
