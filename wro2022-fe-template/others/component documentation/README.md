@@ -18,3 +18,4 @@ Included components:
 - **Capacitors**: Provide voltage smoothing and noise filtering in power lines and signal circuits.
 - **Voltage Regulators**: Ensure stable voltage output to critical components, protecting against fluctuations.
 - **HG7881 H-Bridge Motor Driver**: Dual H-bridge module for controlling DC motors in both directions with speed modulation.
+- **L293D** : Quadruple H-bridge motor driver IC that allows bidirectional control of up to two DC motors, ideal for basic robotic movement and direction control.
