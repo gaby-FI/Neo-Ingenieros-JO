@@ -31,6 +31,8 @@ The initial phase focused on designing the robot based on dimensional sketches a
 - **Arduino Adapter Board:** Used to simplify wiring and component connections  
 
 This stage provided the robot with basic movement capabilities and established a foundation for future integration.
+<img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/e29c1d823745e0fd7d2edbc1f5f1bfaec5b01044/wro2022-fe-template/others/component%20images/Arduino%201%20img.png " height="200"/> 
+
 
 ---
 
