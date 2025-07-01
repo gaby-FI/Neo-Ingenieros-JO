@@ -16,12 +16,6 @@ This repository contains the wiring diagram for the electromechanical system of 
 - 1x Voltage regulator with capacitors  
 - Breadboard and jumper wires
 
-## 📷 Circuit Diagram
-
-> Full connection diagram (created in Tinkercad)
-
-![Circuit Diagram](wro2022-fe-template/schemes/circuitdiagram.jpg)
-
 ## 🔌 Wiring Explanation
 
 ### 🔊 Ultrasonic Sensors
