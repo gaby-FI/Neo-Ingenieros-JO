@@ -18,7 +18,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 
 > Full connection diagram (created in Tinkercad)
 
-![Circuit diagram](https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/fee9b75b983c2b4cfde89bb50cd8a969fcfda3a4/wro2022-fe-template/schemes/circuitdiagram.jpg)
+![Circuit diagram](https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/c19015ff7b8b3c0f9e1593c1dbca7ba38247cd86/wro2022-fe-template/schemes/circuit%20diagram.jpg)
 
 
 ## 🔌 Wiring Explanation
