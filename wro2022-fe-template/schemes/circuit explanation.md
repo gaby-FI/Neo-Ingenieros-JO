@@ -2,6 +2,8 @@
 
 This repository contains the wiring diagram for the electromechanical system of the autonomous vehicle developed for the **WRO Future Engineers 2022** project. The system integrates motors, sensors, controllers, and a regulated power supply to allow coordinated and safe operation of the vehicle.
 
+## 🧩 Components Used
+
 | Quantity | Component             | Image                                              | Description                                                      |
 |----------|-----------------------|----------------------------------------------------|------------------------------------------------------------------|
 | 1        | Arduino UNO           | <img src="component images/Arduino 1 img.png" height="100"/>       | Main microcontroller board used to control all components.       |
@@ -14,18 +16,8 @@ This repository contains the wiring diagram for the electromechanical system of 
 | 1        | 12V Battery           | <img src="images/battery.jpg" height="100"/>       | Power source for motors and logic components.                    |
 | 1        | Voltage Regulator     | <img src="component images/Voltage regulator LM7805 im..." height="100"/>     | Steps down 12V to 5V to protect components from overvoltage.     |
 
-## 🧩 Components Used
 
-- Arduino UNO  
-- 1x DC Motors  
-- 1x Servo Motor  
-- 2x Left Ultrasonic Sensors (HC-SR04)  
-- 1x H-Bridge (L298N)  
-- 1x Gyroscope MPU-6050  
-- 1x Pixy2 Camera  
-- 1x 12V Battery  
-- 1x Voltage regulator with capacitors  
-- Breadboard and jumper wires
+
 ## 📷 Circuit Diagram
 
 > Full connection diagram (created in Tinkercad)
