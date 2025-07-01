@@ -6,7 +6,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 
 | Quantity | Component             | Image                                              | Description                                                      |
 |:---:|-----------------------|----------------------------------------------------|------------------------------------------------------------------|
-| 1   | Arduino UNO           | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/e29c1d823745e0fd7d2edbc1f5f1bfaec5b01044/wro2022-fe-template/others/component%20images/Arduino%201%20img.png" height="100"/>       | Main microcontroller board used to control all components.       |
+| 1   | Arduino UNO           | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/e29c1d823745e0fd7d2edbc1f5f1bfaec5b01044/wro2022-fe-template/others/component%20images/Arduino%201%20img.png" height="200"/>       | Main microcontroller board used to control all components.       |
 | 2   | DC Motors             | <img src="component images/engine Dc IMG.png" height="100"/>        | Motors used for the vehicle’s locomotion.                        |
 | 1   | Servo Motor           | <img src="component images/Micro servo ig.jpg" height="100"/>         | Controls the steering or sensor orientation.                     |
 | 2   | Ultrasonic Sensors    | <img src="component images/HC-SR04-Ultrasonic img.jpg" height="100"/>        | Distance measurement (Left and Right side).                      |
