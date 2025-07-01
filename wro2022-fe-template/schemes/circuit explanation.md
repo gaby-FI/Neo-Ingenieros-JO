@@ -5,7 +5,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 ## 🧩 Components Used
 
 | Quantity | Component             | Image                                              | Description                                                      |
-|:---:|:------------------------:|:------------------------------------------------------:|:-------------------------:|
+|:---:|:------------------------:|:----------------------------------------:|:-------------------------:|
 | 1   | Arduino UNO              | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/e29c1d823745e0fd7d2edbc1f5f1bfaec5b01044/wro2022-fe-template/others/component%20images/Arduino%201%20img.png " height="200"/>       | Main microcontroller board used to control all components.       |
 | 1   | Protoboard               | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/804de712fae17f8989ece6b27a821747b9039abf/wro2022-fe-template/others/component%20images/Breadboarding%20img.jpg " height="200" style="width:auto;" />     | Solderless board used for building and testing electronic circuits. |
 | 1   | DC engine                | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/a22469f03a7eb62f7e6e10bbb9988d80350ef39f/wro2022-fe-template/others/component%20images/engine%20Dc%20IMG.png " height="200"/>        | Motors used for the vehicle’s locomotion.                        |
