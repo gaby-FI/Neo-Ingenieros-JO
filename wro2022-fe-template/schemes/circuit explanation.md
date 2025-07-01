@@ -5,7 +5,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 | Quantity | Component             | Image                             | Description                                                      |
 |----------|-----------------------|-----------------------------------|------------------------------------------------------------------|
 | 1        | Arduino UNO           | ![Arduino](ruta/a/arduino.jpg)    | Main microcontroller board used to control all components.       |
-| 2        | DC Motors             | ![Motors](ruta/a/motores.jpg)     | Motors used for the vehicle’s locomotion.                        |
+| 1        | DC Motors             | ![Motors](ruta/a/motores.jpg)     | Motors used for the vehicle’s locomotion.                        |
 | 1        | Servo Motor           | ![Servo](ruta/a/servo.jpg)        | Controls the steering or sensor orientation.                     |
 | 2        | Ultrasonic Sensors    | ![Ultrasound](ruta/a/sensor.jpg)  | Distance measurement (Left and Right side).                      |
 | 1        | L298N H-Bridge        | ![H-Bridge](ruta/a/hbridge.jpg)   | Driver module for controlling the direction and speed of motors. |
