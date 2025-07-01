@@ -4,8 +4,8 @@ This repository contains the wiring diagram for the electromechanical system of 
 
 | quantity | Component |Image | Description |
 |---|---|---|
-| 1 | Arduino Uno  | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/7ad186842e687bec94b0cac04775ca81ffe2c6e1/wro2022-fe-template/others/component%20images/Arduino%201%20img.png" width="200" height="150"> | 
-| Dato 4  | Dato 5  | Dato 6  |
+| 1 | Arduino Uno  | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/7ad186842e687bec94b0cac04775ca81ffe2c6e1/wro2022-fe-template/others/component%20images/Arduino%201%20img.png" width="200" height="150"> | hola |
+| Dato 4  | Dato 5  | Dato 6  | hola |
 
 ## 🧩 Components Used
 
