@@ -1,126 +1,123 @@
-// Librerías
-#include <Servo.h>         // Librería para controlar el servomotor
-#include <Wire.h>          // Librería para I2C
-#include <MPU6050.h>       // Librería para giroscopio
+// ======== LIBRARIES ========
+#include <Servo.h>        // Library to control the servo motor
+#include <Wire.h>         // Library for I2C communication (used with gyroscope)
+#include <MPU6050.h>      // Library for the MPU6050 gyroscope
+#include <I2Cdev.h>       // Library for I2C device communication
 
-// Pines para motor derecho
-#define MOTOR_DER_ADELANTE 8
-#define MOTOR_DER_ATRAS 7
+// ======== MOTOR PINS ========
+#define MOTOR_DER_ADELANTE 8   // Right motor forward pin
+#define MOTOR_DER_ATRAS 7      // Right motor backward pin
 
-// Pines para los sensores ultrasónicos izquierdo y derecho
-#define trigpinI 13
-#define echopinI 12
-#define trigpinD 2
-#define echopinD 4
+// ======== ULTRASONIC SENSOR PINS ========
+#define trigpinI 13   // Trigger pin for left ultrasonic sensor
+#define echopinI 12   // Echo pin for left ultrasonic sensor
+#define trigpinD 2    // Trigger pin for right ultrasonic sensor
+#define echopinD 4    // Echo pin for right ultrasonic sensor
 
-// Crear objeto del servomotor
-Servo servito;
+// ======== OBJECTS ========
+Servo servito;         // Servo motor object
+MPU6050 sensor;        // Gyroscope object
 
-// Crear objeto del giroscopio
-MPU6050 sensor;
+// MPU6050 address can be 0x68 or 0x69 depending on the AD0 pin state.
+// If not specified, it defaults to 0x68.
 
-// Constantes de configuración
-const int cfloja = 30;            // Margen de diferencia permisible entre sensores
-const int umbralGiro = 100;       // Si hay más de esta distancia, se considera "espacio libre"
-const int umbralCorreccion = 10;  // Diferencia mínima antes de corregir trayectoria
+// ======== CONSTANTS ========
+const int cfloja = 30;            // Acceptable margin between sensor readings
+const int umbralGiro = 100;       // If distance is greater than this, it's considered "free space"
+const int umbralCorreccion = 10;  // Allowed difference before correcting trajectory
 
-int giros = 0; // Contador de giros realizados
+int giros = 0;  // Counter for turns made
 
-// Variables para datos del giroscopio
-int gx, gy, gz;
-long tiempo_prev;
-float girosc_ang_x, girosc_ang_y;
-float girosc_ang_x_prev = 0, girosc_ang_y_prev = 0;
+// ======== RAW GYROSCOPE VALUES ========
+int gx, gy, gz;                   // Raw rotation values from gyroscope (X, Y, Z axes)
+long tiempo_prev, dt;            // Time tracking for integration
+float gc_ang_x, gc_ang_y;        // Calculated angular position (X and Y)
+float gc_ang_x_prev, gc_ang_y_prev;  // Previous angles to integrate over time
 
 void setup() {
-  // Configurar pines de salida para los motores
+  // === MOTOR SETUP ===
   pinMode(MOTOR_DER_ADELANTE, OUTPUT);
   pinMode(MOTOR_DER_ATRAS, OUTPUT);
 
-  // Configurar pines para los sensores ultrasónicos
+  // === ULTRASONIC SENSOR SETUP ===
   pinMode(trigpinI, OUTPUT);
   pinMode(echopinI, INPUT);
   pinMode(trigpinD, OUTPUT);
   pinMode(echopinD, INPUT);
 
-  // Asociar el servo al pin correspondiente
-  servito.attach(3);
+  // === SERVO SETUP ===
+  servito.attach(3);   // Attach the servo to digital pin 3
 
-  // Iniciar comunicación serial
-  Serial.begin(9600);
+  // === SERIAL AND SENSOR INITIALIZATION ===
+  Serial.begin(9600);       // Begin serial communication
+  Wire.begin();             // Initialize I2C communication
+  sensor.initialize();      // Initialize MPU6050
 
-  // Inicializar I2C y giroscopio
-  Wire.begin();
-  sensor.initialize();
-  if (sensor.testConnection()) Serial.println("Sensor iniciado correctamente");
-  else Serial.println("Error al iniciar el sensor");
+  if (sensor.testConnection()) Serial.println("Sensor initialized correctly");
+  else Serial.println("Sensor initialization failed");
 
-  tiempo_prev = millis(); // Guardar tiempo inicial
+  tiempo_prev = millis();   // Store the initial time
+
+  // NOTE: The following lines reference an undefined 'mpu' object.
+  // If you use `MPU6050 sensor;`, then `mpu.begin()` and `mpu.getAngleZ()` will cause errors.
+  // Uncomment and adjust only if using a different MPU6050 library:
+  /*
+  mpu.begin();
+  delay(1000);
+  mpu.calcOffsets();  // Calibrate at rest
+  mpu.update();
+  anguloInicial = mpu.getAngleZ(); // Store initial orientation
+  */
 }
 
-// Función para medir distancia con sensor ultrasónico izquierdo
+// ======== ULTRASONIC MEASUREMENT FUNCTIONS ========
+
+// Measure distance using the left ultrasonic sensor
 long MDizquierda(int trigI, int echoI) {
   digitalWrite(trigI, LOW);
   delayMicroseconds(2);
-  digitalWrite(trigI, HIGH);
+  digitalWrite(trigI, HIGH);        // Send ultrasonic pulse
   delayMicroseconds(10);
   digitalWrite(trigI, LOW);
-  long duracion = pulseIn(echoI, HIGH);
-  return duracion * 0.0343 / 2;
+  long duracion = pulseIn(echoI, HIGH);   // Measure echo return time
+  return duracion * 0.0343 / 2;           // Convert time to distance in cm
 }
 
-// Función para medir distancia con sensor ultrasónico derecho
+// Measure distance using the right ultrasonic sensor
 long MDderecha(int trigD, int echoD) {
   digitalWrite(trigD, LOW);
   delayMicroseconds(2);
-  digitalWrite(trigD, HIGH);
+  digitalWrite(trigD, HIGH);        // Send ultrasonic pulse
   delayMicroseconds(10);
   digitalWrite(trigD, LOW);
-  long duracion = pulseIn(echoD, HIGH);
-  return duracion * 0.0343 / 2;
+  long duracion = pulseIn(echoD, HIGH);   // Measure echo return time
+  return duracion * 0.0343 / 2;           // Convert time to distance in cm
 }
 
-// Movimiento hacia adelante
-void avanzar(int d) {
-  digitalWrite(MOTOR_DER_ADELANTE, 1);
+// ======== BASIC MOVEMENT FUNCTIONS ========
+
+void avanzar() {
+  digitalWrite(MOTOR_DER_ADELANTE, 1);   // Move right motor forward
   digitalWrite(MOTOR_DER_ATRAS, 0);
-  delay(d);
-  detener();
 }
 
-// Movimiento hacia atrás
-void retroceder(int d) {
+void retroceder() {
   digitalWrite(MOTOR_DER_ADELANTE, 0);
-  digitalWrite(MOTOR_DER_ATRAS, 1);
-  delay(d);
-  detener();
+  digitalWrite(MOTOR_DER_ATRAS, 1);     // Move right motor backward
 }
 
-// Detener motor
 void detener() {
   digitalWrite(MOTOR_DER_ADELANTE, 0);
-  digitalWrite(MOTOR_DER_ATRAS, 0);
+  digitalWrite(MOTOR_DER_ATRAS, 0);     // Stop right motor
 }
 
-// Corrección de trayectoria según diferencia en distancias
-void corregirTrayectoria(long izq, long der) {
-  long diferencia = izq - der;
-  if (abs(diferencia) > umbralCorreccion) {
-    if (diferencia > 0) {
-      servito.write(80);  // Corregir izquierda
-    } else {
-      servito.write(100); // Corregir derecha
-    }
-    delay(200);
-    servito.write(90); // Volver a centro
-  }
-}
-
+// ======== MAIN LOOP ========
 void loop() {
-  // === Leer giroscopio ===
+  // Read gyroscope rotational velocities
   sensor.getRotation(&gx, &gy, &gz);
 
-  long dt = millis() - tiempo_prev;
+  // Calculate rotation angles by integrating velocity over time
+  dt = millis() - tiempo_prev;
   tiempo_prev = millis();
 
   girosc_ang_x = (gx / 131.0) * dt / 1000.0 + girosc_ang_x_prev;
@@ -129,35 +126,25 @@ void loop() {
   girosc_ang_x_prev = girosc_ang_x;
   girosc_ang_y_prev = girosc_ang_y;
 
-  Serial.print("Giro X: "); Serial.print(girosc_ang_x);
-  Serial.print("\tGiro Y: "); Serial.println(girosc_ang_y);
-
-  // === Leer sensores ultrasónicos ===
-  long usIzq = MDizquierda(trigpinI, echopinI);
-  long usDer = MDderecha(trigpinD, echopinD);
-
-  Serial.print("Distancia Izq: "); Serial.print(usIzq);
-  Serial.print(" | Distancia Der: "); Serial.println(usDer);
-
-  // === Lógica de movimiento ===
-  if (usIzq > umbralGiro) {
-    servito.write(60); // Gira a la izquierda
-    giros++;
-    delay(500);
-  } else if (usDer > umbralGiro) {
-    servito.write(130); // Gira a la derecha
-    giros++;
-    delay(500);
-  } else {
-    servito.write(90); // Mantener recto
-    avanzar(300);      // Avanzar un poco
-    corregirTrayectoria(usIzq, usDer);
-  }
-
-  if (giros >= 12) {
-    detener(); // Detener después de 12 giros
-    while (true); // Detener loop
-  }
+  // Display calculated angles (X and Y rotation)
+  Serial.print("Rotation X: ");
+  Serial.print(girosc_ang_x);
+  Serial.print("\tRotation Y: ");
+  Serial.println(girosc_ang_y);
 
   delay(100);
+
+  /*
+  // Example logic to compare distances
+  Serial.print(MDizquierda(trigpinI, echopinI));
+  Serial.print("\n");
+  Serial.print(MDderecha(trigpinD, echopinD));
+
+  if (MDizquierda > MDderecha) {
+    servito.write(90);  // Turn servo to center
+  } else if (MDderecha > MDizquierda) {
+    servito.write(20);  // Turn servo slightly left
+  }
+  delay(1000);
+  */
 }
