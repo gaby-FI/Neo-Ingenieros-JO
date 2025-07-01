@@ -2,17 +2,17 @@
 
 This repository contains the wiring diagram for the electromechanical system of the autonomous vehicle developed for the **WRO Future Engineers 2022** project. The system integrates motors, sensors, controllers, and a regulated power supply to allow coordinated and safe operation of the vehicle.
 
-| Quantity | Component             | Image                             | Description                                                      |
-|----------|-----------------------|-----------------------------------|------------------------------------------------------------------|
-| 1        | Arduino UNO           | ![Arduino](ruta/a/arduino.jpg)    | Main microcontroller board used to control all components.       |
-| 1        | DC Motors             | ![Motors](ruta/a/motores.jpg)     | Motors used for the vehicle’s locomotion.                        |
-| 1        | Servo Motor           | ![Servo](ruta/a/servo.jpg)        | Controls the steering or sensor orientation.                     |
-| 2        | Ultrasonic Sensors    | ![Ultrasound](ruta/a/sensor.jpg)  | Distance measurement (Left and Right side).                      |
-| 1        | L298N H-Bridge        | ![H-Bridge](ruta/a/hbridge.jpg)   | Driver module for controlling the direction and speed of motors. |
-| 1        | MPU-6050 Gyroscope    | ![Gyro](ruta/a/gyro.jpg)          | Detects angular motion and helps with orientation.               |
-| 1        | Pixy2 Camera          | ![Pixy2](ruta/a/pixy.jpg)         | Visual object detection system.                                  |
-| 1        | 12V Battery           | ![Battery](ruta/a/battery.jpg)    | Power source for motors and logic components.                    |
-| 1        | Voltage Regulator     | ![Regulator](ruta/a/reg.jpg)      | Steps down 12V to 5V to protect components from overvoltage.     |
+| Quantity | Component             | Image                                              | Description                                                      |
+|----------|-----------------------|----------------------------------------------------|------------------------------------------------------------------|
+| 1        | Arduino UNO           | <img src="component images/Arduino 1 img.png" height="100"/>       | Main microcontroller board used to control all components.       |
+| 2        | DC Motors             | <img src="component images/engine Dc IMG.png" height="100"/>        | Motors used for the vehicle’s locomotion.                        |
+| 1        | Servo Motor           | <img src="component images/Micro servo ig.jpg" height="100"/>         | Controls the steering or sensor orientation.                     |
+| 2        | Ultrasonic Sensors    | <img src="component images/HC-SR04-Ultrasonic img.jpg" height="100"/>        | Distance measurement (Left and Right side).                      |
+| 1        | L298N H-Bridge        | <img src="component images/hg7881 - h bridge img.jpg" height="100"/>       | Driver module for controlling the direction and speed of motors. |
+| 1        | MPU-6050 Gyroscope    | <img src="component images/Mpu6050 img.jpeg" height="100"/>          | Detects angular motion and helps with orientation.               |
+| 1        | Pixy2 Camera          | <img src="component images/Pixy2 cam img.jpg" height="100"/>          | Visual object detection system.                                  |
+| 1        | 12V Battery           | <img src="images/battery.jpg" height="100"/>       | Power source for motors and logic components.                    |
+| 1        | Voltage Regulator     | <img src="component images/Voltage regulator LM7805 im..." height="100"/>     | Steps down 12V to 5V to protect components from overvoltage.     |
 
 ## 🧩 Components Used
 
