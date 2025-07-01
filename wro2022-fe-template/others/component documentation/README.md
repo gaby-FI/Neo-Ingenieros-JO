@@ -10,7 +10,6 @@ Included components:
 - **Arduino UNO**: Main microcontroller used for program execution and peripheral control.
 - **DC Motor**: Converts electrical energy into mechanical rotation for propulsion and actuation.
 - **Breadboarding**: Used for rapid prototyping and testing of circuit connections.
-- **Controller module L9110**: Dual-channel motor driver module.
 - **HC-SR04 Ultrasonic Sensor**: Used for distance measurement and obstacle detection.
 - **MPU-6050**: Motion sensor that combines accelerometer and gyroscope.
 - **Micro servo motor**: Used for mechanical movements such as steering.
