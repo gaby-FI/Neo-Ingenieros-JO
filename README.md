@@ -69,6 +69,53 @@ The designed strategy combines mechanical, electronic, and perception components
   A gyroscope allows the vehicle to recognize its spatial orientation, record the initial position, and ensure that at the end of the route it parks parallel at the same starting position. This component is essential to meet the precise navigation requirements of the competition.
 
 ---
+## 🧠 General Code Structure
+
+This project is divided into functional modules that manage the behavior of an autonomous robot. Below is an overview of the main components of the code:
+
+### 1. 📚 Library Imports
+Essential libraries are included to:
+- Control the **servo motor**.
+- Enable **I2C communication**.
+- Interface with the **MPU6050 gyroscope sensor**.
+
+These libraries simplify hardware interaction and keep the code modular.
+
+### 2. 🧩 Pin and Object Definitions
+Microcontroller pins are assigned to the motors, ultrasonic sensors, and servo. Objects are also created for the servo and gyroscope to manage their operation.
+
+### 3. ⚙️ Variables and Constants
+Constants define decision thresholds (e.g., safe distances to avoid obstacles), and global variables are used to store values like rotation and timing.
+
+### 4. 🔧 Initial Setup
+In the `setup()` function:
+- Pins are configured.
+- I2C communication is initialized.
+- The MPU6050 sensor is initialized and tested.
+- The servo motor is attached.
+
+The serial monitor confirms whether sensors are functioning correctly.
+
+### 5. 📏 Ultrasonic Sensor Readings
+Functions are included to measure distance using ultrasonic sensors on the left and right. This helps the robot detect obstacles and make directional decisions accordingly.
+
+### 6. 🚗 Movement Functions
+Basic movement functions are defined:
+- **Move forward**
+- **Move backward**
+- **Stop**
+
+These directly control the motor pins and determine the robot's mobility.
+
+### 7. 🔁 Main Loop (`loop`)
+The core of the program:
+- Gyroscope data is captured.
+- Rotational velocities are integrated to calculate orientation angles.
+- Data is printed to the serial monitor for debugging or tuning.
+
+There is also commented-out logic that could enable obstacle-avoidance behavior using the ultrasonic sensors.This modular structure makes it easy to scale the system, such as adding more sensors, a camera, or other peripherals without overcomplicating the main codebase.
+
+---
 
 ## 💻 Code Compilation and Upload Process
 
