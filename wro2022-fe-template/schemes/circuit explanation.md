@@ -7,7 +7,8 @@ This repository contains the wiring diagram for the electromechanical system of 
 - Arduino UNO  
 - 2x DC Motors  
 - 1x Servo Motor  
-- 2x Ultrasonic Sensors (HC-SR04)  
+- 1x Left Ultrasonic Sensor (HC-SR04)  
+- 1x Right Ultrasonic Sensor (HC-SR04)  
 - 1x H-Bridge (L298N)  
 - 1x Gyroscope MPU-6050  
 - 1x Pixy2 Camera  
@@ -19,19 +20,19 @@ This repository contains the wiring diagram for the electromechanical system of 
 
 > Full connection diagram (created in Tinkercad)
 
-![Circuit diagram](circuit diagram.jpg)
+![Circuit diagram](Untitled%20design.jpg)
 
 ## 🔌 Wiring Explanation
 
 ### 🔊 Ultrasonic Sensors
 
-**Blue case sensor:**
+**Left sensor:**
 - Trigger (purple) → Pin 13  
 - Echo (white) → Pin 12  
 - VCC (yellow) → Breadboard power rail  
 - GND (brown) → Breadboard ground rail  
 
-**White case sensor:**
+**Right sensor:**
 - Trigger (gray) → Pin 2  
 - Echo (blue) → Pin 4  
 - VCC → Breadboard power rail  
