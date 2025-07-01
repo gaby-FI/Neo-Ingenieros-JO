@@ -7,8 +7,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 - Arduino UNO  
 - 1x DC Motors  
 - 1x Servo Motor  
-- 1x Left Ultrasonic Sensor (HC-SR04)  
-- 1x Right Ultrasonic Sensor (HC-SR04)  
+- 2x Left Ultrasonic Sensors (HC-SR04)  
 - 1x H-Bridge (L298N)  
 - 1x Gyroscope MPU-6050  
 - 1x Pixy2 Camera  
