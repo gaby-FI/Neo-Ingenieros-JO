@@ -86,4 +86,4 @@ This repository contains the wiring diagram for the electromechanical system of 
 - Motors are powered directly from the H-Bridge and battery.  
 - The voltage regulator prevents current spikes that could damage components and guarantees stable 5V output for the electronics.
 
-##✅ Justification of Component Selection
+##  ✅ Justification of Component Selection
