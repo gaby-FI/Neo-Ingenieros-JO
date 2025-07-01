@@ -2,10 +2,17 @@
 
 This repository contains the wiring diagram for the electromechanical system of the autonomous vehicle developed for the **WRO Future Engineers 2022** project. The system integrates motors, sensors, controllers, and a regulated power supply to allow coordinated and safe operation of the vehicle.
 
-| quantity | Component |Image | Description |
-|---|---|---|
-| 1 | Arduino Uno  | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/7ad186842e687bec94b0cac04775ca81ffe2c6e1/wro2022-fe-template/others/component%20images/Arduino%201%20img.png" width="200" height="150"> | hola |
-| Dato 4  | Dato 5  | Dato 6  | hola |
+| Quantity | Component             | Image                             | Description                                                      |
+|----------|-----------------------|-----------------------------------|------------------------------------------------------------------|
+| 1        | Arduino UNO           | ![Arduino](ruta/a/arduino.jpg)    | Main microcontroller board used to control all components.       |
+| 2        | DC Motors             | ![Motors](ruta/a/motores.jpg)     | Motors used for the vehicle’s locomotion.                        |
+| 1        | Servo Motor           | ![Servo](ruta/a/servo.jpg)        | Controls the steering or sensor orientation.                     |
+| 2        | Ultrasonic Sensors    | ![Ultrasound](ruta/a/sensor.jpg)  | Distance measurement (Left and Right side).                      |
+| 1        | L298N H-Bridge        | ![H-Bridge](ruta/a/hbridge.jpg)   | Driver module for controlling the direction and speed of motors. |
+| 1        | MPU-6050 Gyroscope    | ![Gyro](ruta/a/gyro.jpg)          | Detects angular motion and helps with orientation.               |
+| 1        | Pixy2 Camera          | ![Pixy2](ruta/a/pixy.jpg)         | Visual object detection system.                                  |
+| 1        | 12V Battery           | ![Battery](ruta/a/battery.jpg)    | Power source for motors and logic components.                    |
+| 1        | Voltage Regulator     | ![Regulator](ruta/a/reg.jpg)      | Steps down 12V to 5V to protect components from overvoltage.     |
 
 ## 🧩 Components Used
 
