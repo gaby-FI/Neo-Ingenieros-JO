@@ -88,38 +88,34 @@ This repository contains the wiring diagram for the electromechanical system of 
 
 ## ✅ Justification of Component Selection
 🧠 **Arduino UNO**  
-Served as the central processing unit during development, offering straightforward integration with sensors and actuators through its digital and analog I/O. Its reliability and accessibility made it ideal for both prototyping and early-stage deployment.
+Chosen as the main microcontroller for its ease of programming, multiple I/O ports, and compatibility with various modules. It handled all sensor inputs, motor control, and decision-making processes efficiently during the development and testing stages.
 
 ⚙️ **DC Motor**  
-Converted electrical signals into mechanical movement, powering the vehicle’s locomotion system. Essential for achieving forward propulsion and maneuvering through dynamic environments.
+Used for the main propulsion system of the vehicle. These motors convert electrical energy into mechanical movement, enabling the robot to navigate the track reliably with sufficient torque and speed.
 
 🔌 **Breadboard**  
-Enabled modular and solderless circuit construction, allowing fast reconfiguration and troubleshooting of hardware connections during iterative testing phases.
-
-🔁 **Controller Module L9110**  
-Provided dual-channel motor control with a compact footprint and adequate current handling, ensuring directional and speed regulation for small DC motors in a lightweight setup.
+Used to simplify prototyping without soldering. It allowed rapid assembly and reconfiguration of the circuit, especially for distributing power and connecting sensors during testing and debugging phases.
 
 📏 **HC-SR04 Ultrasonic Sensor**  
-Used for obstacle detection and proximity measurement. Its echo-based distance readings informed the navigation logic and real-time collision avoidance behavior.
+Implemented for obstacle detection and distance measurement. Mounted on the sides, these sensors allowed the vehicle to maintain a safe distance from walls and objects, supporting lateral alignment and collision avoidance.
 
 🌀 **MPU-6050**  
-Combined a 3-axis gyroscope and accelerometer to monitor orientation and motion. This data contributed to stability correction and enhanced sensor fusion for trajectory control.
+Provided orientation and motion data through its built-in accelerometer and gyroscope. This information was used to stabilize the vehicle and assist in trajectory adjustments during operation.
 
 ↪️ **Micro Servo Motor (SG90)**  
-Controlled steering mechanisms or sensor positioning, adjusting based on environmental inputs. Its fast response time and precision made it suitable for dynamic direction changes.
+Controlled the front steering mechanism of the vehicle. Based on inputs from the ultrasonic sensors and vision system, the servo motor dynamically adjusted the wheel direction to avoid obstacles and follow the correct path.
 
 🎥 **Pixy2 Cam**  
-Integrated vision processing enabled color-based object recognition and line tracking, supporting autonomous decision-making tasks such as path following and goal detection.
+Served as the visual processing unit for the vehicle. It enabled real-time object detection and line tracking, allowing the robot to follow a predefined path or identify specific targets during competition scenarios.
 
 🔋 **Capacitors**  
-Smoothed voltage fluctuations and filtered high-frequency noise across the power supply and signal lines, improving system stability and sensor accuracy.
+Added to the circuit to filter out electrical noise and stabilize voltage across sensitive components. This ensured smoother operation, especially under varying motor loads.
 
 ⚡ **Voltage Regulators**  
-Maintained consistent voltage levels to protect sensitive components from overvoltage or power drops, especially when transitioning between motor loads.
+Used to supply consistent 5V output to logic-level components from a higher voltage input. This protected the microcontroller and sensors from voltage spikes or drops.
 
 🔀 **HG7881 H-Bridge Motor Driver** *(used in the final vehicle)*  
-Provided efficient bidirectional control of DC motors with PWM support. Its MOSFET-based design ensured low heat generation and compact integration—ideal for embedded mobile systems.
+Enabled bidirectional control of DC motors with PWM support. Its compact design and efficient performance made it ideal for integrating into the mobile platform, controlling both speed and direction.
 
-🔄 **L293D H-Bridge** *(used in the diagram as a placeholder)*  
-Served as a functional substitute in circuit diagrams, capable of controlling two DC motors with directional and speed control. *(Replaces the HG7881 only in the schematic representation.)*
-
+🔄 **L293D H-Bridge** *(used only in the diagram)*  
+Included in the schematic as a visual placeholder. It supports bidirectional control of two DC motors and represents the logic of the system. *(In the physical vehicle, the HG7881 was used instead.)*
