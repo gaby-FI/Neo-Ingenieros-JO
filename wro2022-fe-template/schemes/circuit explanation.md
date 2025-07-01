@@ -15,7 +15,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 | 1   | Pixy2 Camera          | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/09fc35eac25f9ff44fde0437d8d9e47c32e0c396/wro2022-fe-template/others/component%20images/Pixy2%20cam%20img.jpg" height="200"/>          | Visual object detection system.                                  |
 | 1   | 12V Battery           | <img src="images/battery.jpg" height="100"/>       | Power source for motors and logic components.                    |
 | 1   | Voltage Regulator     | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/f3c6f3d93bc7e534023fb729706fbabbd2ee5b88/wro2022-fe-template/others/component%20images/Voltage%20regulator%20LM7805%20img.jpg" height="200"/>     | Steps down 12V to 5V to protect components from overvoltage.     |
-| 2   | Condenser             | <img src="component images/Voltage regulator LM7805 im..." height="100"/>     | Filters electrical interference and stabilizes voltage in the circuit. |
+| 2   | Condenser             | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/72dcc30d27912dda952ebeea4b454c98b80a2417/wro2022-fe-template/others/component%20images/Capacitor.jpg." height="200"/>     | Filters electrical interference and stabilizes voltage in the circuit. |
 
 ## 📷 Circuit Diagram
 
