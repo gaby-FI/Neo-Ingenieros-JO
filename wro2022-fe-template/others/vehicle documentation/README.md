@@ -31,8 +31,6 @@ The initial phase focused on designing the robot based on dimensional sketches a
 - **Arduino Adapter Board:** Used to simplify wiring and component connections  
 
 This stage provided the robot with basic movement capabilities and established a foundation for future integration.
-<img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/e29c1d823745e0fd7d2edbc1f5f1bfaec5b01044/wro2022-fe-template/others/component%20images/Arduino%201%20img.png " height="200"/> 
-
 
 ---
 
@@ -46,6 +44,15 @@ Once the robot could move independently, additional components were added to mee
 - **Servo Motor:** Allowed the robot to control the steering angle and change direction autonomously  
 
 These upgrades allowed the robot to interpret its surroundings and make decisions based on sensor input, increasing its level of autonomy.
+
+
+<div align="center">
+  <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/43ed0ce117a88b1db4d13ddbbef858b84d8ed92a/wro2022-fe-template/v-photos/versions/vehicl.1.3.jpeg" width="300"/>
+  
+  <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/4c40f40a180a4fc5d4120f398b4ab536f67d7a3a/wro2022-fe-template/v-photos/versions/tren%20delantero.jpeg" width="300"/>
+
+  <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/0f6cc830f95ed28ea054435dc222db66ffb98a67/wro2022-fe-template/v-photos/versions/motor%20v1.jpeg" width="300"/>
+</div>
 
 ---
 
@@ -77,7 +84,13 @@ In the final development phase, the robot was equipped with advanced modules to 
 - **Breadboard:** Used to expand ground and voltage lines, improving wiring organization
 - **Upgraded Front Steering:** Implemented using **3D-printed components**, increasing directional control and structural strength
 
----
+<div align="center">
+  <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/43ed0ce117a88b1db4d13ddbbef858b84d8ed92a/wro2022-fe-template/v-photos/versions/vhicle%20v2.jpeg" width="300"/>
+  
+  <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/4c889bdbb7802797e55ca5c8e7afde1fb0d41056/wro2022-fe-template/v-photos/versions/motorv2.jpeg" width="300"/>
+
+</div>
+
 
 ## 🧠 Conclusion
 
