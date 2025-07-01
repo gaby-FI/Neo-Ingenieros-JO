@@ -111,7 +111,7 @@ Served as the visual processing unit for the vehicle. It enabled real-time objec
 ### 🔋 **Capacitors**  
 Added to the circuit to filter out electrical noise and stabilize voltage across sensitive components. This ensured smoother operation, especially under varying motor loads.
 
-🔋 **12V Battery**  
+###🔋 **12V Battery**  
 Served as the primary power source for motors and control modules. While a 12V battery is shown in the diagram for simplicity, the actual vehicle used three 3.7V batteries connected in series via a battery holder (totaling ~11.1V), which met all power requirements effectively.
 
 ### ⚡ **Voltage Regulators**  
