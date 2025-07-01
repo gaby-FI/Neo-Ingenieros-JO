@@ -87,4 +87,39 @@ This repository contains the wiring diagram for the electromechanical system of 
 - The voltage regulator prevents current spikes that could damage components and guarantees stable 5V output for the electronics.
 
 ## ✅ Justification of Component Selection
+🧠 **Arduino UNO**  
+Served as the central processing unit during development, offering straightforward integration with sensors and actuators through its digital and analog I/O. Its reliability and accessibility made it ideal for both prototyping and early-stage deployment.
+
+⚙️ **DC Motor**  
+Converted electrical signals into mechanical movement, powering the vehicle’s locomotion system. Essential for achieving forward propulsion and maneuvering through dynamic environments.
+
+🔌 **Breadboard**  
+Enabled modular and solderless circuit construction, allowing fast reconfiguration and troubleshooting of hardware connections during iterative testing phases.
+
+🔁 **Controller Module L9110**  
+Provided dual-channel motor control with a compact footprint and adequate current handling, ensuring directional and speed regulation for small DC motors in a lightweight setup.
+
+📏 **HC-SR04 Ultrasonic Sensor**  
+Used for obstacle detection and proximity measurement. Its echo-based distance readings informed the navigation logic and real-time collision avoidance behavior.
+
+🌀 **MPU-6050**  
+Combined a 3-axis gyroscope and accelerometer to monitor orientation and motion. This data contributed to stability correction and enhanced sensor fusion for trajectory control.
+
+↪️ **Micro Servo Motor (SG90)**  
+Controlled steering mechanisms or sensor positioning, adjusting based on environmental inputs. Its fast response time and precision made it suitable for dynamic direction changes.
+
+🎥 **Pixy2 Cam**  
+Integrated vision processing enabled color-based object recognition and line tracking, supporting autonomous decision-making tasks such as path following and goal detection.
+
+🔋 **Capacitors**  
+Smoothed voltage fluctuations and filtered high-frequency noise across the power supply and signal lines, improving system stability and sensor accuracy.
+
+⚡ **Voltage Regulators**  
+Maintained consistent voltage levels to protect sensitive components from overvoltage or power drops, especially when transitioning between motor loads.
+
+🔀 **HG7881 H-Bridge Motor Driver** *(used in the final vehicle)*  
+Provided efficient bidirectional control of DC motors with PWM support. Its MOSFET-based design ensured low heat generation and compact integration—ideal for embedded mobile systems.
+
+🔄 **L293D H-Bridge** *(used in the diagram as a placeholder)*  
+Served as a functional substitute in circuit diagrams, capable of controlling two DC motors with directional and speed control. *(Replaces the HG7881 only in the schematic representation.)*
 
