@@ -52,6 +52,34 @@ The goal of this project is to design, build, and program an autonomous robot us
 | 1   | Voltage Regulator        | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/f3c6f3d93bc7e534023fb729706fbabbd2ee5b88/wro2022-fe-template/others/component%20images/Voltage%20regulator%20LM7805%20img.jpg" height="100"/>     | - Input voltage: 7–12V DC<br>- Fixed output: 5V DC<br>- Max current: typically 1A<br>- Provides stable and filtered voltage<br>- Overvoltage and thermal protection<br>- Protects sensitive components |
 | 3   | Capacitors               | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/72dcc30d27912dda952ebeea4b454c98b80a2417/wro2022-fe-template/others/component%20images/Capacitor.jpg" height="100"/>     | - Electrolytic polarized capacitors (100μF, 10μF)<br>- Filters electrical noise and voltage spikes<br>- Stabilizes power supply<br>- Temporary charge storage<br>- Placed near regulators and modules<br>- Improves system stability and performance |
 
+---
+
+## 🔄 Relationship Between Electromechanical Components
+
+- 🧠 The **Arduino UNO** acts as the brain of the vehicle, receiving data from sensors and sending control signals to actuators to coordinate movement.
+
+- 📏 The **ultrasonic sensors** send distance information to the Arduino about side obstacles, allowing adjustment of direction and speed to avoid collisions.
+
+- 🌀 The **MPU-6050 gyroscope** provides orientation and angular velocity data to the Arduino, which uses it to stabilize and correct the vehicle’s trajectory.
+
+- 🎥 The **Pixy2 camera** complements the system’s vision by detecting objects and helping the Arduino follow routes or identify specific targets.
+
+- ⚙️ The **HG7881 H-Bridge** receives commands from the Arduino to control the direction and speed of the **DC motors**, enabling forward, backward, and turning movements.
+
+- 🔩 The **DC motors** execute the commands received from the HG7881, converting electrical energy into physical movement to drive the vehicle.
+
+- 🔌 The **voltage regulator** supplies stable and safe voltage to the Arduino, sensors, servo, and HG7881 controller, protecting the electronic components.
+
+- ↪️ The **servo motor** adjusts steering or sensor orientation based on control signals from the Arduino, improving maneuverability and environmental scanning.
+
+- 🔋 The **capacitors** filter electrical noise and stabilize voltage, ensuring sensors, Arduino, and HG7881 operate without interference.
+
+- 🧩 The **protoboard** facilitates physical connections and distribution of power and signals among all components, allowing organized and flexible assembly without soldering.
+
+Each component depends on the information or energy it receives and transmits to others, creating a coordinated system where sensors detect the environment, the Arduino processes information, and actuators like motors and servos execute the necessary actions for the vehicle’s proper operation.
+
+
+---
 ## 🚗 Strategy and Code Deployment for Autonomous Vehicle Project
 
 The designed strategy combines mechanical, electronic, and perception components to simulate an intelligent vehicle that autonomously navigates a route under conditions similar to a controlled urban environment. The key elements to meet the challenges are:
@@ -148,4 +176,15 @@ Once the code is compiled:
 
 1. Connect the Arduino UNO board to your computer via USB cable.  
 2. Press the **Upload** button (➡️) in the IDE to load the program into the microcontroller’s memory.  
-3. After upload completes, you can monitor the system behavior using the **Serial Monitor** accessible from **Tools > Serial Monitor**, which is especially useful for debugging and data flow verification.
+3. After upload completes, you can monitor the system behavior using the **Serial Monitor** accessible from **Tools > Serial Monitor**, which is especially useful for debugging and data flow verification
+
+---
+
+## 👥 Authors
+
+This project was developed by the **Neo Engineers** team for the **WRO 2025** competition.  
+Participants:  
+- Nelson Figueroa  
+- Gabriela Cisnero  
+- Jesus Alfonzo
+
