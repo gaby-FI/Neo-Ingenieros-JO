@@ -23,7 +23,8 @@ The initial phase focused on designing the robot based on dimensional sketches a
 
 ### 🔌 Initial Electronics Setup
 
-- **Microcontroller:** Arduino UNO  
+- **Microcontroller:** Arduino UNO
+- **Ultrasonic Sensors (2x):** Used for obstacle detection in front and side directions  
 - **Rear-Wheel Movement:** Driven by a DC motor  
 - **Motor Controller:** L298N H-Bridge  
 - **Power Supply:** Elegoo battery  
@@ -39,7 +40,6 @@ Once the robot could move independently, additional components were added to mee
 
 ### 🔍 Installed Modules
 
-- **Ultrasonic Sensors (2x):** Used for obstacle detection in front and side directions  
 - **Pixy2 Camera:** Enabled object or color tracking through visual input  
 - **Servo Motor:** Allowed the robot to control the steering angle and change direction autonomously  
 
@@ -82,8 +82,6 @@ In the final development phase, the robot was equipped with advanced modules to 
 The robot's development followed a structured, iterative approach. From simple sketches and LEGO prototyping to advanced sensor integration and 3D-printed enhancements, the vehicle evolved into a robust, efficient, and autonomous machine ready for competition. The final design prioritizes stability, power efficiency, and intelligent navigation.
 
 ---
-
-## 📁 Suggested Repository Structure
 
 
 
