@@ -2,9 +2,9 @@
 
 This repository contains the wiring diagram for the electromechanical system of the autonomous vehicle developed for the **WRO Future Engineers 2022** project. The system integrates motors, sensors, controllers, and a regulated power supply to allow coordinated and safe operation of the vehicle.
 
-| Encabezado 1 | Encabezado 2 | Encabezado 3 |
+| quantity | Component |Image | Description |
 |---|---|---|
-| Dato 1  | Dato 2  | Dato 3  |
+| 1 | Arduino Uno  | <img src="https://github.com/ItsTheWest/Neo-Ingenieros-JO/blob/7ad186842e687bec94b0cac04775ca81ffe2c6e1/wro2022-fe-template/others/component%20images/Arduino%201%20img.png" width="200" height="150"> | 
 | Dato 4  | Dato 5  | Dato 6  |
 
 ## 🧩 Components Used
