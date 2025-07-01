@@ -111,6 +111,9 @@ Served as the visual processing unit for the vehicle. It enabled real-time objec
 ### 🔋 **Capacitors**  
 Added to the circuit to filter out electrical noise and stabilize voltage across sensitive components. This ensured smoother operation, especially under varying motor loads.
 
+### 🔋 **Batería de 12V**  
+Utilizada como fuente principal de energía para los motores y módulos de control. Aunque en el diseño final se utilizaron tres baterías de 3.7V conectadas en serie mediante un portapilas (equivalente a ~11.1V), la batería de 12V fue representada en el esquema por simplicidad y disponibilidad. Ambas opciones cumplen con los requerimientos de potencia del sistema.
+
 ### ⚡ **Voltage Regulators**  
 Used to supply consistent 5V output to logic-level components from a higher voltage input. This protected the microcontroller and sensors from voltage spikes or drops.
 
