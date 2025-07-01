@@ -5,7 +5,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 ## 🧩 Components Used
 
 - Arduino UNO  
-- 2x DC Motors  
+- 1x DC Motors  
 - 1x Servo Motor  
 - 1x Left Ultrasonic Sensor (HC-SR04)  
 - 1x Right Ultrasonic Sensor (HC-SR04)  
