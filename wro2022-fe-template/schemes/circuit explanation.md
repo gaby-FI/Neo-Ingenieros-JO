@@ -14,6 +14,10 @@ This repository contains the wiring diagram for the electromechanical system of 
 - 1x 12V Battery  
 - 1x Voltage regulator with capacitors  
 - Breadboard and jumper wires
+## 📷 Circuit Diagram
+
+> Full connection diagram (created in Tinkercad)
+
 
 ## 🔌 Wiring Explanation
 
