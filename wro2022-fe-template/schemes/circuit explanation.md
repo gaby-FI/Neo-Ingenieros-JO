@@ -20,7 +20,7 @@ This repository contains the wiring diagram for the electromechanical system of 
 
 > Full connection diagram (created in Tinkercad)
 
-![Circuit diagram](Untitled%20design.jpg)
+![Circuit Diagram](schemes/circuit%20diagram.jpg)
 
 ## 🔌 Wiring Explanation
 
