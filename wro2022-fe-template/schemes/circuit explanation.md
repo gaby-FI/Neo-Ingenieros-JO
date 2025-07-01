@@ -87,35 +87,35 @@ This repository contains the wiring diagram for the electromechanical system of 
 - The voltage regulator prevents current spikes that could damage components and guarantees stable 5V output for the electronics.
 
 ## ✅ Justification of Component Selection
-🧠 **Arduino UNO**  
+### 🧠 **Arduino UNO**  
 Chosen as the main microcontroller for its ease of programming, multiple I/O ports, and compatibility with various modules. It handled all sensor inputs, motor control, and decision-making processes efficiently during the development and testing stages.
 
-⚙️ **DC Motor**  
+### ⚙️ **DC Motor**  
 Used for the main propulsion system of the vehicle. These motors convert electrical energy into mechanical movement, enabling the robot to navigate the track reliably with sufficient torque and speed.
 
-🔌 **Breadboard**  
+### 🔌 **Breadboard**  
 Used to simplify prototyping without soldering. It allowed rapid assembly and reconfiguration of the circuit, especially for distributing power and connecting sensors during testing and debugging phases.
 
-📏 **HC-SR04 Ultrasonic Sensor**  
+### 📏 **HC-SR04 Ultrasonic Sensor**  
 Implemented for obstacle detection and distance measurement. Mounted on the sides, these sensors allowed the vehicle to maintain a safe distance from walls and objects, supporting lateral alignment and collision avoidance.
 
-🌀 **MPU-6050**  
+### 🌀 **MPU-6050**  
 Provided orientation and motion data through its built-in accelerometer and gyroscope. This information was used to stabilize the vehicle and assist in trajectory adjustments during operation.
 
-↪️ **Micro Servo Motor (SG90)**  
+### ↪️ **Micro Servo Motor (SG90)**  
 Controlled the front steering mechanism of the vehicle. Based on inputs from the ultrasonic sensors and vision system, the servo motor dynamically adjusted the wheel direction to avoid obstacles and follow the correct path.
 
-🎥 **Pixy2 Cam**  
+### 🎥 **Pixy2 Cam**  
 Served as the visual processing unit for the vehicle. It enabled real-time object detection and line tracking, allowing the robot to follow a predefined path or identify specific targets during competition scenarios.
 
-🔋 **Capacitors**  
+### 🔋 **Capacitors**  
 Added to the circuit to filter out electrical noise and stabilize voltage across sensitive components. This ensured smoother operation, especially under varying motor loads.
 
-⚡ **Voltage Regulators**  
+### ⚡ **Voltage Regulators**  
 Used to supply consistent 5V output to logic-level components from a higher voltage input. This protected the microcontroller and sensors from voltage spikes or drops.
 
-🔀 **HG7881 H-Bridge Motor Driver** *(used in the final vehicle)*  
+### 🔀 **HG7881 H-Bridge Motor Driver** *(used in the final vehicle)*  
 Enabled bidirectional control of DC motors with PWM support. Its compact design and efficient performance made it ideal for integrating into the mobile platform, controlling both speed and direction.
 
-🔄 **L293D H-Bridge** *(used only in the diagram)*  
+### 🔄 **L293D H-Bridge** *(used only in the diagram)*  
 Included in the schematic as a visual placeholder. It supports bidirectional control of two DC motors and represents the logic of the system. *(In the physical vehicle, the HG7881 was used instead.)*
