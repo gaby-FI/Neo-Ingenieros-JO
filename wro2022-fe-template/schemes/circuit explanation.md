@@ -119,3 +119,6 @@ Enabled bidirectional control of DC motors with PWM support. Its compact design 
 
 ### 🔄 **L293D H-Bridge** *(used only in the diagram)*  
 Included in the schematic as a visual placeholder. It supports bidirectional control of two DC motors and represents the logic of the system. *(In the physical vehicle, the HG7881 was used instead.)*
+
+### 🔋 **Batería de 12V**  
+Utilizada como fuente principal de energía para los motores y módulos de control. Aunque en el diseño final se utilizaron tres baterías de 3.7V conectadas en serie mediante un portapilas (equivalente a ~11.1V), la batería de 12V fue representada en el esquema por simplicidad y disponibilidad. Ambas opciones cumplen con los requerimientos de potencia del sistema.
