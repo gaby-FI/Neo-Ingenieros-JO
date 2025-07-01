@@ -87,3 +87,4 @@ This repository contains the wiring diagram for the electromechanical system of 
 - The voltage regulator prevents current spikes that could damage components and guarantees stable 5V output for the electronics.
 
 ---
+##✅ Justification of Component Selection
